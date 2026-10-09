@@ -34,21 +34,73 @@
 <section id="gallery"><div class="wrap"><h2 class="section-title">DEVICE <span>PREVIEWS</span></h2><div class="gallery"><a href="assets/previews/preview-1.png" rel="noopener" target="_blank"><img alt="Device interface preview 1" loading="lazy" src="assets/previews/preview-1.png"/></a><a href="assets/previews/preview-2.png" rel="noopener" target="_blank"><img alt="Device interface preview 2" loading="lazy" src="assets/previews/preview-2.png"/></a><a href="assets/previews/preview-3.png" rel="noopener" target="_blank"><img alt="Device interface preview 3" loading="lazy" src="assets/previews/preview-3.png"/></a><a href="assets/previews/preview-4.png" rel="noopener" target="_blank"><img alt="Device interface preview 4" loading="lazy" src="assets/previews/preview-4.png"/></a><a href="assets/previews/preview-5.png" rel="noopener" target="_blank"><img alt="Device interface preview 5" loading="lazy" src="assets/previews/preview-5.png"/></a><a href="assets/previews/preview-6.png" rel="noopener" target="_blank"><img alt="Device interface preview 6" loading="lazy" src="assets/previews/preview-6.png"/></a><a href="assets/previews/preview-7.png" rel="noopener" target="_blank"><img alt="Device interface preview 7" loading="lazy" src="assets/previews/preview-7.png"/></a><a href="assets/previews/preview-8.png" rel="noopener" target="_blank"><img alt="Device interface preview 8" loading="lazy" src="assets/previews/preview-8.png"/></a><a href="assets/previews/preview-9.png" rel="noopener" target="_blank"><img alt="Device interface preview 9" loading="lazy" src="assets/previews/preview-9.png"/></a></div></div></section>
 <section class="faq" id="faq"><div class="wrap"><h2 class="section-title">FREQUENTLY ASKED <span>QUESTIONS</span></h2><details><summary>What comes with my order?</summary><p>An Android streaming device, remote, initial setup, and support. IPVanish VPN access is also included.</p></details><details><summary>Are Netflix, Hulu, and other subscriptions included?</summary><p>No. Provider names shown are for reference; separate services and their subscriptions are not included.</p></details><details><summary>Do you ship devices?</summary><p>Shipping and local pickup are available. Contact us by email for details.</p></details><details><summary>How do I contact Kable Killers?</summary><p>Email <a href="mailto:kablekillers6@gmail.com">kablekillers6@gmail.com</a> or visit our Facebook group.</p></details></div></section></main>
 <footer><div class="wrap foot"><div><a href="https://www.facebook.com/share/g/18QBBLQT7H/" rel="noopener" target="_blank"><strong>ⓕ Join Our Facebook Group</strong></a><div>Get updates, tips, and support</div></div><div class="counter"><img alt="Visitor count provided by a third-party service" src="https://api.visitorbadge.io/api/visitors?path=kablekillers.github.io&amp;label=Site%20visits&amp;countColor=%2300bfff"/></div><div><strong>✉ Contact Us</strong><div><a href="mailto:kablekillers6@gmail.com">kablekillers6@gmail.com</a></div></div></div><p class="fine">© 2026 Kable Killers · Not affiliated with any third-party streaming provider.</p></footer>
-<div id="kk-intro" hidden aria-label="Kable Killers opening animation"><video id="kk-intro-video" autoplay muted playsinline preload="auto"><source src="assets/Kable_Killers_Premium_Electric_Boot.mp4?v=2" type="video/mp4"></video><button id="kk-skip" type="button">Skip Intro →</button></div>
+<div id="kk-intro" hidden aria-label="Kable Killers opening animation">
+  <video id="kk-intro-video" muted playsinline webkit-playsinline preload="auto">
+    <source src="assets/Kable_Killers_Premium_Electric_Boot.mp4?v=3" type="video/mp4">
+  </video>
+  <div id="kk-intro-message" role="status">Loading Kable Killers intro…</div>
+  <button id="kk-play" type="button" hidden>▶ Play Intro</button>
+  <button id="kk-skip" type="button">Skip Intro →</button>
+</div>
+<style>
+#kk-intro-message{position:absolute;left:50%;bottom:100px;transform:translateX(-50%);font:bold 16px Arial,sans-serif;color:#cceeff;text-align:center;pointer-events:none}
+#kk-play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);border:1px solid #5fd5ff;background:#06375a;color:white;border-radius:10px;padding:17px 28px;font:bold 18px Arial,sans-serif;cursor:pointer;z-index:100000}
+#kk-play[hidden]{display:none!important}
+</style>
 <script>
 (function(){
-  var key='kk_intro_seen_session_v2', intro=document.getElementById('kk-intro'), video=document.getElementById('kk-intro-video');
-  if(!intro || !video) return;
-  try {if(sessionStorage.getItem(key)==='yes')return;sessionStorage.setItem(key,'yes');}catch(e){}
-  intro.hidden=false;document.body.style.overflow='hidden';
-  var done=false;
-  function closeIntro(){if(done)return;done=true;intro.style.display='none';intro.hidden=true;document.body.style.overflow='';try{video.pause();}catch(e){};intro.remove();}
-  document.getElementById('kk-skip').addEventListener('click',closeIntro);document.getElementById('kk-skip').onclick=closeIntro;
-  video.addEventListener('ended',closeIntro);video.addEventListener('error',closeIntro);video.addEventListener('stalled',function(){setTimeout(function(){if(video.readyState<2)closeIntro();},2500);});
-  var timeout=setTimeout(closeIntro,8000);
-  video.addEventListener('ended',function(){clearTimeout(timeout);});
-  if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches){closeIntro();return;}
-  var result=video.play();if(result && result.catch)result.catch(closeIntro);
+  var key='kk_intro_seen_session_v3';
+  var intro=document.getElementById('kk-intro');
+  var video=document.getElementById('kk-intro-video');
+  var skip=document.getElementById('kk-skip');
+  var playButton=document.getElementById('kk-play');
+  var message=document.getElementById('kk-intro-message');
+  if(!intro||!video||!skip)return;
+  try{if(sessionStorage.getItem(key)==='yes')return;}catch(e){}
+  if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var done=false,watchdog=null;
+  intro.hidden=false;
+  document.body.style.overflow='hidden';
+  function closeIntro(){
+    if(done)return;
+    done=true;
+    if(watchdog)clearTimeout(watchdog);
+    try{sessionStorage.setItem(key,'yes');}catch(e){}
+    try{video.pause();}catch(e){}
+    document.body.style.overflow='';
+    intro.remove();
+  }
+  function showPlay(){
+    if(done)return;
+    playButton.hidden=false;
+    message.textContent='Tap Play Intro to start, or Skip Intro to enter the site.';
+  }
+  function tryPlay(){
+    if(done)return;
+    playButton.hidden=true;
+    message.textContent='Loading Kable Killers intro…';
+    var attempt;
+    try{attempt=video.play();}catch(e){showPlay();return;}
+    if(attempt&&typeof attempt.catch==='function')attempt.catch(showPlay);
+  }
+  skip.addEventListener('click',closeIntro);
+  playButton.addEventListener('click',tryPlay);
+  video.addEventListener('playing',function(){
+    message.textContent='';
+    playButton.hidden=true;
+    if(watchdog)clearTimeout(watchdog);
+    watchdog=setTimeout(closeIntro,Math.max(30000,(isFinite(video.duration)?video.duration*1000+5000:30000)));
+  });
+  video.addEventListener('ended',closeIntro);
+  video.addEventListener('error',function(){
+    message.textContent='The intro video could not load. You can still enter the website.';
+    playButton.hidden=false;
+  });
+  video.addEventListener('waiting',function(){if(!done)message.textContent='Buffering intro…';});
+  video.addEventListener('canplay',function(){if(!done&&video.paused)tryPlay();});
+  // Never trap visitors on a blank screen if the file cannot load.
+  setTimeout(function(){if(!done&&video.paused)showPlay();},4500);
+  tryPlay();
 })();
 </script>
 </body></html>
