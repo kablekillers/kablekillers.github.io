@@ -23,11 +23,56 @@
 #kk-intro video{width:100%;height:100%;object-fit:contain}
 #kk-skip{position:absolute;right:clamp(14px,4vw,45px);bottom:clamp(20px,5vh,48px);border:1px solid #5fd5ff;background:#061a2edc;color:white;border-radius:9px;padding:12px 22px;font:bold 15px Arial,sans-serif;cursor:pointer;box-shadow:0 0 18px #009dff66}
 .logo-tile img{filter:none!important}
-#kk-intro[hidden]{display:none!important}#kk-skip{z-index:2147483647!important;pointer-events:auto!important;cursor:pointer!important}</style></head><body>
-<header class="nav"><div class="wrap nav-inner"><a class="brand" href="#home">⚡ KABLE KILLERS</a><nav class="links"><a href="#home">Home</a><a href="#features">Features</a><a class="optional" href="#providers">Providers</a><a class="optional" href="#testimonials">Testimonials</a><a class="optional" href="#faq">FAQ</a><a class="button" href="https://www.paypal.com/ncp/payment/B6KAFH5DV8JNC" rel="noopener noreferrer" target="_blank">ORDER NOW</a></nav></div></header>
+#kk-intro[hidden]{display:none!important}#kk-skip{z-index:2147483647!important;pointer-events:auto!important;cursor:pointer!important}
+/* Kable Killers live sports showcase */
+#sports{position:relative;background:radial-gradient(ellipse at 50% 5%,#083d6d 0%,#020915 70%);border-top:1px solid #08689e;border-bottom:1px solid #08689e}
+#sports .sports-kicker{text-align:center;color:#6cdeff;font-size:13px;font-weight:900;letter-spacing:4px;margin-bottom:10px}
+#sports .sports-lead{text-align:center;color:#d0e7f5;max-width:760px;margin:0 auto 28px;line-height:1.65}
+#sports .sports-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+#sports .sports-tile{position:relative;overflow:hidden;min-height:130px;border:1px solid #137fb9;border-radius:14px;background:linear-gradient(140deg,#092a47,#020b18 75%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;box-shadow:inset 0 0 20px #00aaff13,0 5px 20px #0004}
+#sports .sports-tile:before{content:"";position:absolute;inset:-80% auto auto -35%;width:85%;height:200%;background:linear-gradient(90deg,transparent,#27baff0c,transparent);transform:rotate(25deg);pointer-events:none}
+#sports .sports-symbol{font-size:33px;line-height:1}
+#sports .sports-wordmark{font-size:clamp(24px,3vw,38px);font-weight:1000;font-style:italic;letter-spacing:1px;text-shadow:0 0 17px #007fff70}
+#sports .sports-name{font-size:12px;letter-spacing:1.2px;text-transform:uppercase;color:#9ecce5;font-weight:800}
+#sports .sports-channels-heading{font-size:clamp(22px,3vw,30px);text-align:center;font-weight:1000;font-style:italic;margin:40px 0 16px}
+#sports .sports-channels-heading span{color:#1ac8ff}
+#sports .sports-channels{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+#sports .sports-channel{min-height:112px;border:1px solid #00a9f4;border-radius:13px;background:linear-gradient(135deg,#0a3455,#04101e);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center;padding:18px 8px}
+#sports .sports-channel strong{font-size:clamp(17px,2.3vw,26px);font-weight:1000;font-style:italic;line-height:1.05}
+#sports .sports-channel small{font-size:12px;color:#a9c9df}
+#sports .sports-channel .redzone{color:#ff5d68}
+#sports .sports-disclaimer{text-align:center;color:#9bb8ce;font-size:12px;line-height:1.65;max-width:880px;margin:21px auto 0}
+@media(max-width:650px){#sports .sports-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}#sports .sports-tile{min-height:112px}#sports .sports-channels{grid-template-columns:1fr;gap:9px}#sports .sports-channel{min-height:85px}#sports .sports-wordmark{font-size:28px}}
+</style><style>
+#sports .sports-real-logo{display:block;width:100%;max-width:150px;height:76px;object-fit:contain;filter:none!important;margin:0 auto 8px}
+#sports .sports-channel-logo{display:block;width:100%;max-width:200px;height:64px;object-fit:contain;filter:none!important;margin:0 auto 5px}
+#sports .sports-logo-fallback{font-size:25px;font-weight:900;color:#fff;margin:10px auto}
+#sports .sports-tile{justify-content:center}
+</style></head><body>
+<header class="nav"><div class="wrap nav-inner"><a class="brand" href="#home">⚡ KABLE KILLERS</a><nav class="links"><a href="#home">Home</a><a href="#features">Features</a><a class="optional" href="#providers">Providers</a><a class="optional" href="#sports">Sports</a><a class="optional" href="#testimonials">Testimonials</a><a class="optional" href="#faq">FAQ</a><a class="button" href="https://www.paypal.com/ncp/payment/B6KAFH5DV8JNC" rel="noopener noreferrer" target="_blank">ORDER NOW</a></nav></div></header>
 <main><div class="hero" id="home"><div class="wrap hero-inner"><div><h1>THE ULTIMATE<br/><span>STREAMING DEVICE</span></h1><div class="strap">MOVIES <span class="dot">•</span> TV SHOWS <span class="dot">•</span> SPORTS <span class="dot">•</span> MORE!</div><div class="highlights"><span><b>▣</b>Movies &amp; TV</span><span><b>★</b>Sports entertainment</span><span><b>⚙</b>Simple setup</span><span><b>⚡</b>Convenient interface</span></div><a class="button" href="#order">EXPLORE THE PACKAGE</a></div><div aria-label="Illustration of a streaming device and remote" class="device-area"><div class="stick">KABLE<br/>KILLERS</div><div class="device"><div class="dlogo">KABLE<br/>KILLERS</div><div class="circle"></div><div style="color:#9ac4df">● ● ●</div></div></div></div></div>
 <section id="features"><div class="wrap"><div class="features"><article class="feature"><div class="feature-icon">▣</div><h3>HUGE LIBRARY</h3><p>Explore a broad selection of movies and TV shows in one interface.</p></article><article class="feature"><div class="feature-icon">★</div><h3>ALL YOUR FAVORITES</h3><p>Browse entertainment organized in one convenient place.</p></article><article class="feature"><div class="feature-icon">⚙</div><h3>EASY SETUP</h3><p>Connect your device to your TV and Wi-Fi to get started.</p></article><article class="feature"><div class="feature-icon">✓</div><h3>NO KABLE KILLERS MONTHLY FEE</h3><p>One-time device purchase. Third-party services may have separate costs.</p></article></div></div></section>
 <section id="providers"><div class="wrap"><h2 class="section-title">ENTERTAINMENT FROM <span>FAMILIAR PROVIDERS</span></h2><div class="providers"><div class="provider logo-tile"><img alt="Netflix logo" loading="lazy" src="assets/netflix.png"/></div><div class="provider logo-tile"><img alt="Hulu logo" loading="lazy" src="assets/hulu.png"/></div><div class="provider logo-tile"><img alt="Prime Video logo" loading="lazy" src="assets/primevideo.png"/></div><div class="provider logo-tile"><img alt="Peacock logo" loading="lazy" src="assets/peacock.png"/></div><div class="provider logo-tile"><img alt="HBO Max logo" loading="lazy" src="assets/max.png"/></div><div class="provider logo-tile"><img alt="Tubi logo" loading="lazy" src="assets/tubi.png"/></div><div class="provider logo-tile"><img alt="Disney+ logo" loading="lazy" src="assets/disneyplus.png"/></div><div class="provider logo-tile"><img alt="Paramount+ logo" loading="lazy" src="assets/paramountplus.png"/></div><div class="provider logo-tile"><img alt="Crunchyroll logo" loading="lazy" src="assets/crunchyroll.png"/></div><div class="provider logo-tile"><img alt="Apple TV logo" loading="lazy" src="assets/appletv.png"/></div><div class="provider logo-tile"><img alt="Discovery+ logo" loading="lazy" src="assets/discoveryplus.png"/></div><div class="provider logo-tile"><img alt="STARZ logo" loading="lazy" src="assets/starz.png"/></div><div class="provider logo-tile"><img alt="AMC+ logo" loading="lazy" src="assets/amc.png"/></div><div class="provider logo-tile"><img alt="MGM+ logo" loading="lazy" src="assets/mgm.png"/></div><div class="provider logo-tile"><img alt="BritBox logo" loading="lazy" src="assets/britbox.png"/></div></div><p class="fine">These names identify familiar entertainment providers, not apps or subscriptions included with your purchase. All names and trademarks belong to their respective owners. Kable Killers is not affiliated with or endorsed by them. Availability of content and authorized access may vary.</p></div></section>
+<section id="sports" aria-labelledby="sports-title"><div class="wrap">
+<div class="sports-kicker">⚡ GAME DAY STARTS HERE ⚡</div>
+<h2 id="sports-title" class="section-title">BIG GAMES. <span>LIVE SPORTS.</span></h2>
+<p class="sports-lead">Football Sundays, baseball season, basketball, hockey, golf, and fight nights — explore your favorite sports from one convenient streaming setup.</p>
+<div class="sports-grid">
+<div class="sports-tile"><img class="sports-real-logo" src="https://commons.wikimedia.org/wiki/Special:FilePath/NFL%20wordmark%20logo%202008.svg" alt="NFL logo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><strong class="sports-logo-fallback" style="display:none">NFL</strong><div class="sports-name">Football</div></div>
+<div class="sports-tile"><img class="sports-real-logo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Major%20League%20Baseball%20logo.svg" alt="MLB logo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><strong class="sports-logo-fallback" style="display:none">MLB</strong><div class="sports-name">Baseball</div></div>
+<div class="sports-tile"><img class="sports-real-logo" src="https://commons.wikimedia.org/wiki/Special:FilePath/National%20Basketball%20Association%20logo%202017-present.svg" alt="NBA logo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><strong class="sports-logo-fallback" style="display:none">NBA</strong><div class="sports-name">Basketball</div></div>
+<div class="sports-tile"><img class="sports-real-logo" src="https://commons.wikimedia.org/wiki/Special:FilePath/National%20Hockey%20League%20shield.svg" alt="NHL logo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><strong class="sports-logo-fallback" style="display:none">NHL</strong><div class="sports-name">Hockey</div></div>
+<div class="sports-tile"><img class="sports-real-logo" src="https://commons.wikimedia.org/wiki/Special:FilePath/PGA%20Tour%20logo.svg" alt="PGA TOUR logo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><strong class="sports-logo-fallback" style="display:none">PGA TOUR</strong><div class="sports-name">Golf coverage</div></div>
+<div class="sports-tile"><img class="sports-real-logo" src="https://commons.wikimedia.org/wiki/Special:FilePath/UFC%20logo.svg" alt="UFC logo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><strong class="sports-logo-fallback" style="display:none">UFC</strong><div class="sports-name">Mixed martial arts</div></div>
+</div>
+<h3 class="sports-channels-heading">FEATURED <span>SPORTS SERVICES</span></h3>
+<div class="sports-channels">
+<div class="sports-channel"><img class="sports-channel-logo" src="https://commons.wikimedia.org/wiki/Special:FilePath/NFL%20Network%20logo.svg" alt="NFL NETWORK logo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><strong class="sports-logo-fallback" style="display:none">NFL NETWORK</strong><small>Football news, shows &amp; coverage</small></div>
+<div class="sports-channel"><img class="sports-channel-logo" src="https://commons.wikimedia.org/wiki/Special:FilePath/NFL%20RedZone%20Logo%20%282012%29.png" alt="NFL REDZONE logo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><strong class="sports-logo-fallback" style="display:none">NFL REDZONE</strong><small>Sunday game-day action</small></div>
+<div class="sports-channel"><img class="sports-channel-logo" src="https://commons.wikimedia.org/wiki/Special:FilePath/MLB.tv%20logo.svg" alt="MLB.TV logo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><strong class="sports-logo-fallback" style="display:none">MLB.TV</strong><small>Baseball streaming</small></div>
+</div>
+<p class="sports-disclaimer">Sports leagues and services listed for identification only. Kable Killers is not affiliated with or endorsed by the NFL, MLB, NBA, NHL, UFC, or their networks. Programming, live-game availability, blackouts, and access requirements vary. Third-party subscriptions or authorized access may be required.</p>
+</div></section>
 <section><div class="wrap"><div class="vpn"><div class="vpn-brand">IP<span>VANISH</span> <small style="font-size:14px;color:#d5e9fa">VPN</small></div><div><h2>FREE <span>IPVANISH VPN</span> INCLUDED</h2><p>Helps protect your privacy by encrypting your internet connection. Your internet provider generally cannot see the specific sites you visit through the VPN tunnel, although VPNs do not provide complete anonymity.</p></div></div></div></section>
 <section id="testimonials"><div class="wrap"><h2 class="section-title">CUSTOMER <span>TESTIMONIALS</span></h2><div class="review review-card"><div class="review-person"><img alt="Cheyanna profile picture" class="review-avatar" loading="lazy" src="assets/cheyanna.png"/><div class="name">★ Cheyanna</div></div><blockquote>“This product works great! I’ve been able to watch so many movies and TV shows I’ve been missing out on. It’s already paid for itself, and I haven’t even had it for a month yet! Definitely worth it!”</blockquote><small>Real customer review · Last name withheld</small></div><div class="review review-card"><div class="review-person"><img alt="Steven profile picture" class="review-avatar" loading="lazy" src="assets/steven.png"/><div class="name">Steven</div></div><blockquote>I just got mine and im loving it  Canceled all other streaming services. One morning I woke up and was having problems with the system. Messaged about the problem. Replied super quick and had the problem fixed in under 20 min. I have recommended this product to my family and friends.</blockquote><small>Customer review · Last name omitted</small></div></div></section>
 <section id="order"><div class="wrap"><div class="order-box"><div><h2>GET YOUR <span>KABLE KILLERS DEVICE</span></h2><ul><li>Android streaming device and remote</li><li>Initial setup included</li><li>IPVanish VPN included</li><li>Shipping and local pickup available</li><li>Support through email and Facebook group</li></ul></div><div><div class="price">$250</div><a class="paypal" href="https://www.paypal.com/ncp/payment/B6KAFH5DV8JNC" rel="noopener noreferrer" target="_blank">BUY NOW WITH PayPal</a><div class="paynote">Secure checkout through PayPal · Available payment methods shown at checkout</div></div></div></div></section>
@@ -35,72 +80,65 @@
 <section class="faq" id="faq"><div class="wrap"><h2 class="section-title">FREQUENTLY ASKED <span>QUESTIONS</span></h2><details><summary>What comes with my order?</summary><p>An Android streaming device, remote, initial setup, and support. IPVanish VPN access is also included.</p></details><details><summary>Are Netflix, Hulu, and other subscriptions included?</summary><p>No. Provider names shown are for reference; separate services and their subscriptions are not included.</p></details><details><summary>Do you ship devices?</summary><p>Shipping and local pickup are available. Contact us by email for details.</p></details><details><summary>How do I contact Kable Killers?</summary><p>Email <a href="mailto:kablekillers6@gmail.com">kablekillers6@gmail.com</a> or visit our Facebook group.</p></details></div></section></main>
 <footer><div class="wrap foot"><div><a href="https://www.facebook.com/share/g/18QBBLQT7H/" rel="noopener" target="_blank"><strong>ⓕ Join Our Facebook Group</strong></a><div>Get updates, tips, and support</div></div><div class="counter"><img alt="Visitor count provided by a third-party service" src="https://api.visitorbadge.io/api/visitors?path=kablekillers.github.io&amp;label=Site%20visits&amp;countColor=%2300bfff"/></div><div><strong>✉ Contact Us</strong><div><a href="mailto:kablekillers6@gmail.com">kablekillers6@gmail.com</a></div></div></div><p class="fine">© 2026 Kable Killers · Not affiliated with any third-party streaming provider.</p></footer>
 <div id="kk-intro" hidden aria-label="Kable Killers opening animation">
-  <video id="kk-intro-video" muted playsinline webkit-playsinline preload="auto">
-    <source src="assets/Kable_Killers_Premium_Electric_Boot.mp4?v=3" type="video/mp4">
-  </video>
-  <div id="kk-intro-message" role="status">Loading Kable Killers intro…</div>
-  <button id="kk-play" type="button" hidden>▶ Play Intro</button>
-  <button id="kk-skip" type="button">Skip Intro →</button>
+ <video id="kk-intro-video" muted playsinline webkit-playsinline preload="auto" src="assets/Kable_Killers_Premium_Electric_Boot.mp4?v=4"></video>
+ <p id="kk-intro-status" role="status">Loading your intro…</p>
+ <button id="kk-intro-play" type="button" hidden>▶ Play Intro</button>
+ <button id="kk-skip" type="button">Skip Intro →</button>
 </div>
 <style>
-#kk-intro-message{position:absolute;left:50%;bottom:100px;transform:translateX(-50%);font:bold 16px Arial,sans-serif;color:#cceeff;text-align:center;pointer-events:none}
-#kk-play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);border:1px solid #5fd5ff;background:#06375a;color:white;border-radius:10px;padding:17px 28px;font:bold 18px Arial,sans-serif;cursor:pointer;z-index:100000}
-#kk-play[hidden]{display:none!important}
+#kk-intro-status{position:absolute;bottom:95px;left:10%;width:80%;text-align:center;color:#d9f6ff;font:bold 16px Arial;pointer-events:none}
+#kk-intro-play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);padding:17px 26px;border:1px solid #5fd5ff;border-radius:10px;background:#034878;color:white;font:bold 19px Arial;z-index:100001;cursor:pointer}
+#kk-intro-play[hidden]{display:none!important}
 </style>
 <script>
 (function(){
-  var key='kk_intro_seen_session_v3';
-  var intro=document.getElementById('kk-intro');
-  var video=document.getElementById('kk-intro-video');
-  var skip=document.getElementById('kk-skip');
-  var playButton=document.getElementById('kk-play');
-  var message=document.getElementById('kk-intro-message');
-  if(!intro||!video||!skip)return;
-  try{if(sessionStorage.getItem(key)==='yes')return;}catch(e){}
-  if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
-  var done=false,watchdog=null;
-  intro.hidden=false;
-  document.body.style.overflow='hidden';
-  function closeIntro(){
-    if(done)return;
-    done=true;
-    if(watchdog)clearTimeout(watchdog);
-    try{sessionStorage.setItem(key,'yes');}catch(e){}
-    try{video.pause();}catch(e){}
-    document.body.style.overflow='';
-    intro.remove();
-  }
-  function showPlay(){
-    if(done)return;
-    playButton.hidden=false;
-    message.textContent='Tap Play Intro to start, or Skip Intro to enter the site.';
-  }
-  function tryPlay(){
-    if(done)return;
-    playButton.hidden=true;
-    message.textContent='Loading Kable Killers intro…';
-    var attempt;
-    try{attempt=video.play();}catch(e){showPlay();return;}
-    if(attempt&&typeof attempt.catch==='function')attempt.catch(showPlay);
-  }
-  skip.addEventListener('click',closeIntro);
-  playButton.addEventListener('click',tryPlay);
-  video.addEventListener('playing',function(){
-    message.textContent='';
-    playButton.hidden=true;
-    if(watchdog)clearTimeout(watchdog);
-    watchdog=setTimeout(closeIntro,Math.max(30000,(isFinite(video.duration)?video.duration*1000+5000:30000)));
-  });
-  video.addEventListener('ended',closeIntro);
-  video.addEventListener('error',function(){
-    message.textContent='The intro video could not load. You can still enter the website.';
-    playButton.hidden=false;
-  });
-  video.addEventListener('waiting',function(){if(!done)message.textContent='Buffering intro…';});
-  video.addEventListener('canplay',function(){if(!done&&video.paused)tryPlay();});
-  // Never trap visitors on a blank screen if the file cannot load.
-  setTimeout(function(){if(!done&&video.paused)showPlay();},4500);
-  tryPlay();
+ const overlay=document.getElementById('kk-intro');
+ const video=document.getElementById('kk-intro-video');
+ const skip=document.getElementById('kk-skip');
+ const play=document.getElementById('kk-intro-play');
+ const status=document.getElementById('kk-intro-status');
+ const sessionKey='kk_intro_completed_v4';
+ const force=new URLSearchParams(location.search).get('intro')==='1';
+ if(!overlay||!video||!skip)return;
+ try {if(!force && sessionStorage.getItem(sessionKey)==='yes')return;}catch(e){}
+ overlay.hidden=false;
+ document.body.style.overflow='hidden';
+ let closed=false, safetyTimer;
+ function closeIntro(){
+   if(closed)return;
+   closed=true;
+   clearTimeout(safetyTimer);
+   try{sessionStorage.setItem(sessionKey,'yes');}catch(e){}
+   try{video.pause();}catch(e){}
+   document.body.style.overflow='';
+   overlay.remove();
+ }
+ function manual(message){
+   if(closed)return;
+   play.hidden=false;
+   status.textContent=message || 'Select Play Intro, or Skip Intro to enter the website.';
+ }
+ function start(){
+   if(closed)return;
+   play.hidden=true;
+   status.textContent='Loading intro…';
+   let result;
+   try{result=video.play();}catch(e){manual('Autoplay unavailable. Select Play Intro.');return;}
+   if(result && typeof result.catch==='function')result.catch(function(){manual('Autoplay blocked. Select Play Intro.');});
+ }
+ skip.addEventListener('click',closeIntro);
+ play.addEventListener('click',start);
+ video.addEventListener('playing',function(){
+   play.hidden=true;
+   status.textContent='';
+   clearTimeout(safetyTimer);
+   safetyTimer=setTimeout(closeIntro,45000);
+ });
+ video.addEventListener('ended',closeIntro);
+ video.addEventListener('error',function(){manual('Video unavailable. Select Skip Intro to continue.');});
+ // A stalled load should show controls, not silently bypass the intro.
+ setTimeout(function(){if(!closed && video.paused)manual('Select Play Intro to start the animation.');},3500);
+ start();
 })();
 </script>
 </body></html>
